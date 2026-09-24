@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dnevna doza domaće stvarnosti, bez šećera i bez cenzure." />
+    <title>ŠIT — nezavisni satirični list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="paper-texture" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="topline">
+        <span>četvrtak, 24. rujna 2026.</span>
+        <span class="topline-center">nezavisni satirični list</span>
+        <span>broj <strong>001</strong> / cijena: živci</span>
+      </div>
+      <div class="masthead">
+        <p class="eyebrow">glasilo zdravog razuma i svih nas ostalih heretika, koji ne idemo na vjeronauk i mrzimo sve što je...</p>
+        <div class="brand-lockup">
+          <span class="brand-mark">ŠIT</span>
+          <span class="brand-dot">.</span>
+        </div>
+        <p class="tagline">Dnevna doza domaće stvarnosti na tjednoj bazi.<br />Bez šećera. Bez cenzure.</p>
+      </div>
+      <nav class="main-nav" aria-label="Glavna navigacija">
+        <button class="nav-item is-active" data-filter="sve">sve</button>
+        <button class="nav-item" data-filter="politika">politika</button>
+        <button class="nav-item" data-filter="društvo">društvo</button>
+        <button class="nav-item" data-filter="sport">sport</button>
+        <button class="nav-item" data-filter="kultura">kultura</button>
+        <button class="nav-item" data-filter="foto">foto</button>
+        <span class="nav-rule" aria-hidden="true"></span>
+        <button class="issue-button" id="manifestoButton">što je ovo?</button>
+      </nav>
+    </header>
+
+    <main class="front-page">
+      <!-- NASLOVNICA: izvanredna vijest, vidljiva samo pod "sve" -->
+      <section class="breaking-line homepage-only" aria-label="Najnovija vijest">
+        <span class="breaking-label">izvanredno</span>
+        <p>Država ponovno iznenađena činjenicom da ljudi imaju račune za platiti</p>
+        <span class="breaking-time">prije 12 min</span>
+      </section>
+
+      <!-- NASLOVNICA: glavna vijest, bočne vijesti i bilješka -->
+      <section class="lead-grid homepage-only">
+        <article class="lead-story story-card" data-category="politika">
+          <div class="story-kicker">POLITIKA / GLAVNA VIJEST</div>
+          <h1>Vlada predstavila novi paket mjera: građani će odsad moći još brže ostati bez svega</h1>
+          <p class="lead-dek">Nakon uspjeha prethodnog paketa koji je građane ostavio bez daha, nova reforma obećava još manje zraka za isti novac.</p>
+          <div class="story-meta"><span>piše: redakcija</span><span>4 min čitanja</span></div>
+          <div class="lead-image image-treatment image-government" role="img" aria-label="Ilustracija prazne govornice"></div>
+          <p class="caption">Ilustracija: još jedan mikrofon koji čeka odgovor.</p>
+        </article>
+        <aside class="side-column">
+          <article class="brief-story story-card" data-category="društvo">
+            <div class="story-kicker">DRUŠTVO</div>
+            <h2>Hrvati otkrili da je “samo pet minuta” zapravo cijeli radni dan</h2>
+            <p>Ekskluzivno istraživanje provedeno u redu za šaltere.</p>
+            <div class="story-meta"><span>2 min</span><span class="arrow">↗</span></div>
+          </article>
+          <article class="brief-story story-card" data-category="sport">
+            <div class="story-kicker">SPORT</div>
+            <h2>Reprezentacija uspješno obranila nulu do zadnjeg zvižduka</h2>
+            <p>Izbornik zadovoljan: “Najvažnije je da nismo pobijedili prerano.”</p>
+            <div class="story-meta"><span>3 min</span><span class="arrow">↗</span></div>
+          </article>
+          <div class="editor-note">
+            <span class="note-stamp">BILJEŠKA</span>
+            <p>“Nije problem što je smiješno. Problem je što je istinito.”</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- NASLOVNICA: zaglavlje sekcije "Šit dana" -->
+      <section class="section-heading homepage-only">
+        <h2>Šit dana</h2>
+        <span class="section-count">odabrano s terena / 03</span>
+      </section>
+      <!-- NASLOVNICA: tri vijesti u sekciji "Šit dana" -->
+      <section class="story-grid homepage-only">
+        <article class="grid-story story-card" data-category="društvo">
+          <div class="story-number">01</div>
+          <div class="story-kicker">DNEVNA DOZA</div>
+          <h3>Ministarstvo uvelo tišinu kao novu digitalnu uslugu</h3>
+          <p>Prvih 30 dana besplatno, nakon toga se naplaćuje po decibelu.</p>
+          <div class="story-meta"><span>društvo</span><span>2 min</span></div>
+        </article>
+        <article class="grid-story story-card" data-category="kultura">
+          <div class="story-number">02</div>
+          <div class="story-kicker">KULTURA</div>
+          <h3>Otvoren festival nepročitanih knjiga i nedovršenih projekata</h3>
+          <p>Publika oduševljena. Nitko nije došao, ali svi su označili “zainteresiran”.</p>
+          <div class="story-meta"><span>kultura</span><span>3 min</span></div>
+        </article>
+        <article class="grid-story story-card" data-category="politika">
+          <div class="story-number">03</div>
+          <div class="story-kicker">ANALIZA</div>
+          <h3>Analitičari složni: sve je nejasno, ali ton je odlučan</h3>
+          <p>“Situacija je kompleksna”, poručuju iz prostorije bez prozora.</p>
+          <div class="story-meta"><span>politika</span><span>5 min</span></div>
+        </article>
+      </section>
+
+      <!-- RUBRIKA: politika - prikazuje se samo nakon klika na "politika" -->
+      <section class="category-only-section" data-category-section="politika" aria-label="Vijesti iz politike">
+        <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Politika</h2><span class="section-count">redakcijski izbor</span></div>
+        <div class="category-feature-grid">
+          <article class="category-feature story-card" data-category="politika">
+            <div class="story-kicker">ANALIZA</div>
+            <h1>Analitičari složni: sve je nejasno, ali ton je odlučan</h1>
+            <p class="lead-dek">Situacija je kompleksna, poručuju iz prostorije bez prozora, dok se odluka ponovno odgađa za sutra.</p>
+            <div class="story-meta"><span>politika</span><span>5 min</span></div>
+          </article>
+          <div class="category-side">
+            <article class="brief-story story-card" data-category="politika"><div class="story-kicker">VLAST</div><h2>Vlada predstavila novi paket mjera: građani će odsad moći još brže ostati bez svega</h2><p>Nova reforma obećava još manje zraka za isti novac.</p></article>
+            <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Odluka je teška. Zato je donosimo već treći mandat.”</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RUBRIKA: društvo - prikazuje se samo nakon klika na "društvo" -->
+      <section class="category-only-section" data-category-section="društvo" aria-label="Vijesti iz društva">
+        <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Društvo</h2><span class="section-count">s terena</span></div>
+        <div class="category-list-layout">
+          <div class="category-list-number">02</div>
+          <div>
+            <article class="category-feature story-card" data-category="društvo"><div class="story-kicker">SVAKODNEVICA</div><h1>Hrvati otkrili da je “samo pet minuta” zapravo cijeli radni dan</h1><p class="lead-dek">Ekskluzivno istraživanje provedeno u redu za šaltere.</p><div class="story-meta"><span>društvo</span><span>2 min</span></div></article>
+            <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Društvo je spremno za promjene. Samo još nije stiglo.”</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RUBRIKA: sport - prikazuje se samo nakon klika na "sport" -->
+      <section class="category-only-section" data-category-section="sport" aria-label="Vijesti iz sporta">
+        <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Sport</h2><span class="section-count">iz svlačionice</span></div>
+        <div class="category-sport-layout">
+          <article class="category-feature story-card" data-category="sport"><div class="story-kicker">REZULTAT</div><h1>Reprezentacija uspješno obranila nulu do zadnjeg zvižduka</h1><p class="lead-dek">Izbornik zadovoljan: “Najvažnije je da nismo pobijedili prerano.”</p><div class="story-meta"><span>sport</span><span>3 min</span></div></article>
+          <div class="sport-stamp">0 : 0<br /><small>konačni rezultat</small></div>
+          <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Forma je prolazna. Izgovori su vječni.”</p></div>
+        </div>
+      </section>
+
+      <!-- RUBRIKA: kultura - prikazuje se samo nakon klika na "kultura" -->
+      <section class="category-only-section" data-category-section="kultura" aria-label="Vijesti iz kulture">
+        <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Kultura</h2><span class="section-count">iz galerije apsurda</span></div>
+        <div class="category-culture-layout">
+          <article class="category-feature story-card" data-category="kultura"><div class="story-kicker">KULTURA</div><h1>Otvoren festival nepročitanih knjiga i nedovršenih projekata</h1><p class="lead-dek">Publika oduševljena. Nitko nije došao, ali svi su označili “zainteresiran”.</p><div class="story-meta"><span>kultura</span><span>3 min</span></div></article>
+          <article class="category-feature culture-secondary story-card" data-category="kultura"><div class="story-kicker">NOVI MEDIJ</div><h2>Ministarstvo kulture predstavilo novi oblik umjetnosti: čekanje odgovora</h2><p>Instalacija traje neograničeno, a posjetitelji mogu otići kad god žele.</p><div class="story-meta"><span>kultura</span><span>3 min</span></div></article>
+          <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Nije problem što je umjetnost nerazumljiva. Problem je što je razumljiva.”</p></div>
+        </div>
+      </section>
+
+      <!-- RUBRIKA: foto - ovdje se mijenja samo slika -->
+      <section class="category-only-section" data-category-section="foto" aria-label="Foto rubrika">
+        <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Foto</h2><span class="section-count">slika dana</span></div>
+        <div class="photo-feature">
+          <figure class="photo-frame">
+            <img src="7mw5kc52msna1.jpg" alt="Fotografija za rubriku Foto" />
+            <figcaption>Foto: arhiva redakcije / 24. rujna 2026.</figcaption>
+          </figure>
+          <div class="photo-copy">
+            <div class="story-kicker">FOTOGRAFIJA DANA</div>
+            <h1>Slika govori više nego što bi institucije htjele</h1>
+            <p class="lead-dek">Ovdje možeš promijeniti fotografiju, naslov i kratki opis. Za novu fotografiju zamijeni samo naziv datoteke u atributu <code>src</code>.</p>
+            <div class="story-meta"><span>foto</span><span>1 min</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NASLOVNICA: citat iz stvarnosti i "Šit of the Year" -->
+      <section class="bottom-grid homepage-only">
+        <div class="quote-panel">
+          <!-- OVDJE UPIŠI citat, autora i izvor -->
+          <span class="story-kicker">CITAT IZ STVARNOSTI / OVAJ ŠIT NIJE ŠALA</span>
+          <blockquote>“Ovo nije rupa u sustavu. Ovo je sustav.”</blockquote>
+          <p class="quote-attribution">— anonimni korisnik javnih usluga</p>
+          <p class="quote-source">Izvor: javna rasprava, 24. rujna 2026.</p>
+        </div>
+        <div class="year-panel">
+          <div class="year-topline"><span>ŠIT OF THE YEAR</span><span>2026</span></div>
+          <h2>Tko će kući odnijeti<br /><em>zlatnu kantu?</em></h2>
+          <p>Glasanje traje do trenutka kada više nikome neće biti smiješno.</p>
+          <button class="vote-button" id="voteButton">glasaj za svog favorita <span>→</span></button>
+          <span class="vote-status" id="voteStatus" aria-live="polite"></span>
+        </div>
+      </section>
+    </main>
+
+    <!-- PODNOŽJE: zajedničko svim prikazima -->
+    <footer class="site-footer">
+      <div class="footer-brand">ŠIT<span>.</span></div>
+      <p>satira nije vijest, ali ponekad bolje pogodi.</p>
+      <div class="footer-meta"><span>© 2026 ŠIT</span><span>napravljeno s nevjericom</span><span>kontakt: redakcija@šit.hr</span></div>
+    </footer>
+
+    <dialog id="manifestoDialog" class="manifesto-dialog">
+      <button class="dialog-close" id="dialogClose" aria-label="Zatvori">×</button>
+      <span class="story-kicker">UREDNIČKI MANIFEST</span>
+      <h2>Ne tražimo istinu.<br /><em>Samo je malo pomaknemo.</em></h2>
+      <p>ŠIT je satirični front page o stvarima koje bi bile smiješne da nisu svakodnevne. Sve je izmišljeno. Nažalost.</p>
+      <p class="dialog-signature">— redakcija</p>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
