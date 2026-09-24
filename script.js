@@ -55,4 +55,4 @@ toplineDate.textContent = new Date().toLocaleDateString("hr-HR", { weekday: "lon
 const issueNumber = document.querySelector("#issueNumber");
 const firstIssueDate = Date.UTC(2026, 9, 2);
 const daysSinceFirst = Math.floor((Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) - firstIssueDate) / 86400000);
-issueNumber.textContent = String(Math.max(1, Math.floor(daysSinceFirst / 7) + 1)).padStart(3, "0");
+issueNumber.textContent = String(Math.max(0, Math.floor(daysSinceFirst / 7) + 1)).padStart(3, "0");
