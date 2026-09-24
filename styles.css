@@ -19,10 +19,23 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .topline-center { color: var(--muted); }
 .masthead { align-items: center; border-bottom: 4px solid var(--ink); display: flex; justify-content: space-between; padding: 22px 0 18px; }
 .eyebrow, .tagline { width: 190px; font: 10px/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.tagline { text-align: right; color: var(--muted); }
+.eyebrow { transition: opacity .35s ease, letter-spacing .35s ease; }
+.eyebrow:hover { animation: kisa-na-staklu 2.4s ease-in-out infinite; opacity: .78; letter-spacing: .13em; }
+@keyframes kisa-na-staklu {
+  0%, 100% { filter: blur(1.1px); transform: translateY(0); }
+  45% { filter: blur(2.1px); transform: translateY(.6px); }
+  60% { filter: blur(1.5px); }
+}
+.tagline { perspective: 420px; text-align: right; color: var(--muted); }
+.tag-word { display: inline-block; white-space: nowrap; }
+.tag-word span { display: inline-block; transition: transform .55s ease; }
+.tagline:hover .tag-word span { transform: rotateY(180deg); }
 .brand-lockup { line-height: .68; }
 .brand-mark { display: inline-block; font: 700 clamp(86px, 13vw, 166px)/.75 var(--serif); letter-spacing: -.055em; transform: scaleX(.92); transform-origin: center; }
-.brand-dot { color: var(--accent); display: inline-block; font: 700 clamp(60px, 8vw, 104px)/1 var(--serif); margin-left: .08em; transform: translateY(-.02em); }
+.brand-s { display: inline-block; transform: rotate(-6deg); transform-origin: 50% 100%; transition: transform .25s ease; }
+.brand-lockup:hover .brand-s { transform: rotate(0deg); }
+.brand-dot { color: var(--accent); display: inline-block; font: 700 clamp(60px, 8vw, 104px)/1 var(--serif); margin-left: .08em; transform: translateY(-.02em); transition: transform .25s ease; }
+.brand-lockup:hover .brand-dot { transform: translateY(-.02em) translateX(.22em); }
 .footer-brand span { color: var(--accent); }
 .main-nav { align-items: center; border-bottom: 1px solid var(--line); display: flex; gap: 26px; padding: 13px 0; }
 .nav-item, .issue-button { background: none; border: 0; color: var(--ink); cursor: pointer; font: 500 11px var(--mono); letter-spacing: .08em; padding: 0; text-transform: uppercase; }
@@ -100,10 +113,7 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .category-feature h2 { font: 700 28px/1.12 var(--serif); letter-spacing: -.04em; margin: 10px 0; }
 .category-side { border-left: 1px solid var(--line); padding-left: 28px; }
 .category-side .brief-story { border-bottom: 0; }
-.category-list-layout { border-bottom: 1px solid var(--line); display: grid; gap: 35px; grid-template-columns: 80px 1fr; padding: 30px 0; }
-.category-list-number, .sport-stamp { color: var(--accent); font: 700 64px var(--mono); }
-.category-list-layout .category-feature { max-width: 780px; }
-.category-list-layout .editor-note { max-width: 500px; }
+.sport-stamp { color: var(--accent); font: 700 64px var(--mono); }
 .category-sport-layout { align-items: center; grid-template-columns: 1.5fr .7fr 1fr; }
 .sport-stamp { border: 2px solid var(--ink); color: var(--ink); padding: 20px; text-align: center; transform: rotate(-3deg); }
 .sport-stamp small { color: var(--muted); font: 10px var(--mono); text-transform: uppercase; }
@@ -141,10 +151,9 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
   .category-header { display: block; }
   .category-header h2 { font-size: 42px; margin: 8px 0; }
   .category-header .section-count { display: block; margin: 0; }
-  .category-feature-grid, .category-sport-layout, .category-culture-layout, .category-list-layout, .photo-feature { display: block; }
+  .category-feature-grid, .category-sport-layout, .category-culture-layout, .photo-feature { display: block; }
   .category-side, .culture-secondary { border-left: 0; border-top: 1px solid var(--line); margin-top: 27px; padding: 25px 0 0; }
-  .category-list-number { display: none; }
-  .sport-stamp { margin: 25px 0; max-width: 190px; }
+    .sport-stamp { margin: 25px 0; max-width: 190px; }
   .photo-copy { padding-top: 25px; }
   .grid-story, .grid-story + .grid-story { border-bottom: 1px solid var(--line); border-right: 0; min-height: auto; padding: 20px 0; }
   .grid-story:last-child { border-bottom: 0; }
