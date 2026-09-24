@@ -46,3 +46,13 @@ voteButton.addEventListener("click", () => {
   voteButton.innerHTML = "glas je zaprimljen <span>✓</span>";
   voteStatus.textContent = "Hvala. Povjerenstvo će ga vjerojatno ignorirati.";
 });
+
+// DATUM: gornja linija uvijek prikazuje današnji datum.
+const toplineDate = document.querySelector("#toplineDate");
+toplineDate.textContent = new Date().toLocaleDateString("hr-HR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+
+// BROJ IZDANJA: tjednik izlazi svakog petka; prvi broj je petak 2. listopada 2026.
+const issueNumber = document.querySelector("#issueNumber");
+const firstIssueDate = Date.UTC(2026, 9, 2);
+const daysSinceFirst = Math.floor((Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) - firstIssueDate) / 86400000);
+issueNumber.textContent = String(Math.max(1, Math.floor(daysSinceFirst / 7) + 1)).padStart(3, "0");
