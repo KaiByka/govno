@@ -15,12 +15,14 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
 .paper-texture { position: fixed; inset: 0; pointer-events: none; opacity: .14; z-index: 10; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.15'/%3E%3C/svg%3E"); mix-blend-mode: multiply; }
 .site-header, .front-page, .site-footer { max-width: 1240px; margin: 0 auto; padding-left: 32px; padding-right: 32px; position: relative; z-index: 1; }
-.topline { border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 12px 0 9px; text-transform: uppercase; letter-spacing: .12em; font: 500 10px var(--mono); }
-.topline-center { color: var(--muted); }
+.topline { border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto 1fr; padding: 12px 0 9px; text-transform: uppercase; letter-spacing: .12em; font: 500 10px var(--mono); }
+.topline-center { color: var(--muted); text-align: center; }
+.topline span:first-child { grid-column: 1; }
+.topline span:last-child { grid-column: 3; text-align: right; }
 .masthead { align-items: center; border-bottom: 4px solid var(--ink); display: flex; justify-content: space-between; padding: 22px 0 18px; }
 .eyebrow, .tagline { width: 190px; font: 10px/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.eyebrow { transition: opacity .35s ease, letter-spacing .35s ease; }
-.eyebrow:hover { animation: kisa-na-staklu 2.4s ease-in-out infinite; opacity: .78; letter-spacing: .13em; }
+.eyebrow { animation: kisa-na-staklu 2.4s ease-in-out infinite; opacity: .78; letter-spacing: .13em; transition: opacity .35s ease, letter-spacing .35s ease; }
+.eyebrow:hover { animation: none; opacity: 1; letter-spacing: .08em; }
 @keyframes kisa-na-staklu {
   0%, 100% { filter: blur(1.1px); transform: translateY(0); }
   45% { filter: blur(2.1px); transform: translateY(.6px); }
@@ -28,15 +30,15 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 }
 .tagline { perspective: 420px; text-align: right; color: var(--muted); }
 .tag-word { display: inline-block; white-space: nowrap; }
-.tag-word span { display: inline-block; transition: transform .55s ease; }
-.tagline:hover .tag-word span { transform: rotateY(180deg); }
+.tag-word span { display: inline-block; transform: rotateY(180deg); transition: transform .55s ease; }
+.tagline:hover .tag-word span { transform: rotateY(0deg); }
 .brand-lockup { line-height: .68; }
 .brand-mark { display: inline-block; font: 700 clamp(86px, 13vw, 166px)/.75 var(--serif); letter-spacing: -.055em; transform: scaleX(.92); transform-origin: center; }
 .brand-s { display: inline-block; transform: rotate(-6deg); transform-origin: 50% 100%; transition: transform .25s ease; }
 .brand-lockup:hover .brand-s { transform: rotate(0deg); }
 .brand-dot { color: var(--accent); display: inline-block; font: 700 clamp(60px, 8vw, 104px)/1 var(--serif); margin-left: .08em; transform: translateY(-.02em); transition: transform .25s ease; }
 .brand-lockup:hover .brand-dot { transform: translateY(-.02em) translateX(.22em); }
-.footer-brand span { color: var(--accent); }
+.footer-brand .brand-dot { color: var(--accent); font-size: 1em; }
 .main-nav { align-items: center; border-bottom: 1px solid var(--line); display: flex; gap: 26px; padding: 13px 0; }
 .nav-item, .issue-button { background: none; border: 0; color: var(--ink); cursor: pointer; font: 500 11px var(--mono); letter-spacing: .08em; padding: 0; text-transform: uppercase; }
 .nav-item { position: relative; }
@@ -165,8 +167,8 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
   .site-header, .front-page, .site-footer { padding-left: 18px; padding-right: 18px; }
   .topline-center, .tagline { display: none; }
   .topline { font-size: 8px; }
-  .masthead { padding: 17px 0 13px; }
-  .eyebrow { width: auto; font-size: 8px; }
+  .masthead { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 17px 0 13px; }
+  .eyebrow { width: auto; max-width: 360px; font-size: 8px; text-align: center; }
   .brand-mark { font-size: 84px; }
   .main-nav { gap: 16px; overflow-x: auto; }
   .nav-item, .issue-button { font-size: 9px; white-space: nowrap; }
