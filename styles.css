@@ -54,9 +54,27 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .lead-dek { font: 18px/1.45 var(--serif); margin: 0 0 19px; max-width: 660px; }
 .story-meta { border-top: 1px solid var(--soft-line); color: var(--muted); display: flex; font: 10px var(--mono); justify-content: space-between; letter-spacing: .05em; margin-top: 18px; padding-top: 9px; text-transform: uppercase; }
 .image-treatment { overflow: hidden; position: relative; }
-.lead-image { height: 260px; margin-top: 25px; background: linear-gradient(110deg, #272724 0 33%, #777 33% 37%, #d2cfc7 37%); }
-.image-government::before { background: repeating-linear-gradient(90deg, transparent 0 50px, rgba(0,0,0,.55) 51px 55px), linear-gradient(120deg, transparent 0 40%, #98958c 40% 55%, transparent 55%); content: ""; inset: 0; position: absolute; transform: skewX(-12deg); }
-.image-government::after { border: 1px solid rgba(255,255,255,.35); content: "MI NE ZNAMO"; color: rgba(255,255,255,.7); font: 20px var(--mono); padding: 12px; position: absolute; right: 7%; top: 28%; transform: rotate(-8deg); }
+.lead-image {
+  background-image: linear-gradient(120deg, rgba(9, 9, 9, .15), rgba(9, 9, 9, .05)), url("realistic-microphones-illustration_176516-526.avif");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+.image-government::before {
+  background: linear-gradient(90deg, rgba(13,13,13,.32), rgba(13,13,13,0));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+.image-government::after {
+  border: 1px solid rgba(255,255,255,.2);
+  content: "";
+  inset: 12px;
+  position: absolute;
+}
 .caption { color: var(--muted); font: 10px var(--mono); margin-top: 8px; }
 .side-column { border-left: 1px solid var(--line); padding-left: 26px; }
 .brief-story { border-bottom: 1px solid var(--line); padding: 0 0 23px; }
@@ -70,12 +88,14 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .section-heading { align-items: baseline; border-top: 4px solid var(--ink); display: flex; justify-content: space-between; padding: 10px 0 18px; }
 .section-heading h2 { font: 700 34px var(--serif); letter-spacing: -.05em; margin: 0; }
 .section-count { color: var(--muted); font: 10px var(--mono); text-transform: uppercase; }
-.story-grid { border-bottom: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
-.grid-story { border-right: 1px solid var(--line); min-height: 235px; padding: 14px 22px 20px 0; position: relative; }
-.grid-story + .grid-story { padding-left: 22px; }
+.story-grid { border-bottom: 1px solid var(--line); display: grid; gap: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-story { border-right: 1px solid var(--line); min-height: 224px; padding: 12px 18px 18px 0; position: relative; }
+.grid-story:nth-child(3n + 2),
+.grid-story:nth-child(3n + 3) { padding-left: 20px; }
 .grid-story:last-child { border-right: 0; }
-.story-number { color: var(--muted); font: 10px var(--mono); margin-bottom: 34px; }
-.grid-story h3 { font: 700 22px/1.2 var(--serif); letter-spacing: -.035em; margin: 9px 0; }
+.story-number { color: var(--muted); font: 10px var(--mono); margin-bottom: 20px; }
+.grid-story h3 { font: 700 20px/1.16 var(--serif); letter-spacing: -.035em; margin: 8px 0 9px; }
+.grid-story .story-meta { margin-top: 14px; padding-top: 8px; }
 .bottom-grid { display: grid; grid-template-columns: 1fr 1.5fr; padding: 42px 0 65px; }
 .quote-panel { border-right: 1px solid var(--line); padding-right: 36px; }
 blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing: -.055em; margin: 23px 0 18px; }
@@ -114,7 +134,20 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .category-side { border-left: 1px solid var(--line); padding-left: 28px; }
 .category-side .brief-story { border-bottom: 0; }
 .sport-stamp { color: var(--accent); font: 700 64px var(--mono); }
-.category-sport-layout { align-items: center; grid-template-columns: 1.5fr .7fr 1fr; }
+.category-sport-layout {
+  align-items: start;
+  gap: 24px;
+  grid-template-columns: 1.1fr 1.1fr .8fr;
+}
+.category-sport-layout .category-feature {
+  border-right: 1px solid var(--line);
+  padding-right: 24px;
+}
+.category-sport-layout .category-feature + .category-feature {
+  padding-left: 24px;
+  padding-right: 0;
+  border-right: 0;
+}
 .sport-stamp { border: 2px solid var(--ink); color: var(--ink); padding: 20px; text-align: center; transform: rotate(-3deg); }
 .sport-stamp small { color: var(--muted); font: 10px var(--mono); text-transform: uppercase; }
 .category-culture-layout { align-items: start; grid-template-columns: 1.2fr 1fr .8fr; }
