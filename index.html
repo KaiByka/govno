@@ -46,17 +46,17 @@
     <main class="front-page">
       <!-- NASLOVNICA: izvanredna vijest, vidljiva samo pod "sve" -->
       <section class="breaking-line homepage-only" aria-label="Najnovija vijest">
-        <span class="breaking-label">izvanredno</span>
-        <p>Država ponovno iznenađena činjenicom da ljudi imaju račune za platiti</p>
-        <span class="breaking-time">prije 12 min</span>
+        <span class="breaking-label">nazadno</span>
+        <div class="ticker"><p>Plenkovićev ministar na Hodu za život tražio zabranu pobačaja: 'Treba revidirati komunistički zakon'. Ministre, govno.si na to kaže: `Komunisti su barem gledali u budućnost a vi gledate u prošlost. Zbog toga nema napretka.`</p></div>
+        <span class="breaking-time">dobrodošli u srednji vijek</span>
       </section>
 
       <!-- NASLOVNICA: glavna vijest, bočne vijesti i bilješka -->
       <section class="lead-grid homepage-only">
         <article class="lead-story story-card" data-category="politika">
-          <div class="story-kicker">POLITIKA / GLAVNA VIJEST</div>
-          <h1>"Nismo činili čuda", tvrdi čovjek koji je čudo što je na vlasti već deset godina</h1>
-          <p class="lead-dek">Uzornoj publici koja ne smije pitati, Plenković je najavio najveći podatkovni centar u Europi, koji bi po ranoj procjeni trebao završiti kao Maksimir, samo s klima-uređajem.</p>
+          <div class="story-kicker">NITKO KAO HDZ</div>
+          <h1>HDZ prvi put održao natječaj za mišljenje: pobijedila su sva tri</h1>
+          <p class="lead-dek">Dok Mladež tvrdi da je stadion "zahvala sportašima", a šef zagrebačke organizacije da je "propuh za 200 milijuna", središnjica je primijenila poznatu tehniku: pričekati da vidi što će reći ljudi, pa to preuzeti kao stav.</p>
           <div class="story-meta"><span>piše: redakcija</span><span>čitaj polako</span></div>
           <div class="lead-image image-treatment image-government" role="img" aria-label="Ilustracija prazne govornice"></div>
           <p class="caption">Ilustracija: još jedan mikrofon koji čeka odgovor.</p>
@@ -69,9 +69,9 @@
             <div class="story-meta"><span>2 min</span><span class="arrow">↗</span></div>
           </article>
           <article class="brief-story story-card" data-category="sport">
-            <div class="story-kicker">SPORT</div>
-            <h2>Repstacija uspješno obranila nulu do zadnjeg zvižduka</h2>
-            <p>Izbornik zadovoljan: “Najvažnije je da nismo pobijedili prerano.”</p>
+            <div class="story-kicker">SVE JE SUPER I SVE JE ZA PET</div>
+            <h2>"Nismo činili čuda", tvrdi čovjek koji je čudo što je na vlasti već deset godina</h2>
+            <p>Uzornoj publici koja ne smije ništa pitati, Plenković je najavio najveći podatkovni centar u Europi, koji bi po ranoj procjeni trebao završiti kao Maksimir, samo s klima-uređajem.</p>
             <div class="story-meta"><span>3 min</span><span class="arrow">↗</span></div>
           </article>
           <div class="editor-note">
@@ -95,7 +95,7 @@
           <p>Prvih 30 dana besplatno, nakon toga se naplaćuje po decibelu.</p>
           <div class="story-meta"><span>društvo</span><span>2 min</span></div>
         </article>
-        <article class="grid-story story-card" data-category="kultura">
+        <article class="grid-story story-card" data-category="kultura" data-story="festival" tabindex="0">
           <div class="story-number">02</div>
           <div class="story-kicker">KULTURA</div>
           <h3>Otvoren festival nepročitanih knjiga i nedovršenih projekata</h3>
@@ -136,14 +136,22 @@
       <section class="category-only-section" data-category-section="politika" aria-label="Vijesti iz politike">
         <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Politika</h2><span class="section-count">redakcijski izbor</span></div>
         <div class="category-feature-grid">
-          <article class="category-feature story-card" data-category="politika">
-            <div class="story-kicker">ANALIZA</div>
-            <h1>Analitičari složni: sve je nejasno, ali ton je odlučan</h1>
-            <p class="lead-dek">Situacija je kompleksna, poručuju iz prostorije bez prozora, dok se odluka ponovno odgađa za sutra.</p>
-            <div class="story-meta"><span>politika</span><span>5 min</span></div>
-          </article>
+          <div class="category-feature-group">
+            <article class="category-feature story-card" data-category="politika">
+              <div class="story-kicker">BAUK JOŠ UVIJEK KRUŽI</div>
+              <h1>Hrvatska napokon saznala plan za demografsku obnovu (duhovna je već na snazi): prvo ukinuti izbor</h1>
+              <p class="lead-dek">Ministar demografije Иван Шипић javno je obrazložio politiku "ja kao vjernik", i bio je precizan: demografiju ne rješavaju plaće, stanovi ni vrtići, nego revizija "komunističkog zakona".</p>
+              <div class="story-meta"><span>politika</span><span>5 min</span></div>
+            </article>
+            <article class="category-feature story-card" data-category="politika">
+              <div class="story-kicker">ANALIZA</div>
+              <h2>Analitičari složni: sve je nejasno, ali ton je odlučan</h2>
+              <p class="lead-dek">Situacija je kompleksna, poručuju iz prostorije bez prozora, dok se odluka ponovno odgađa za sutra.</p>
+              <div class="story-meta"><span>politika</span><span>5 min</span></div>
+            </article>
+          </div>
           <div class="category-side">
-            <article class="brief-story story-card" data-category="politika"><div class="story-kicker">GLAVNA VIJEST</div><h2>“Nismo činili čuda”, tvrdi čovjek koji je čudo što je na vlasti već deset godina</h2><p>Uzornoj publici koja ne smije pitati, Plenković je najavio najveći podatkovni centar u Europi, koji bi po ranoj procjeni trebao završiti kao Maksimir, samo s klima-uređajem.</p></article>
+            <article class="brief-story story-card" data-category="politika"><div class="story-kicker">SVEMU DOĐE KRAJ</div><h2>“Nismo činili čuda”, tvrdi čovjek koji je čudo što je na vlasti već deset godina</h2><p>Uzornoj publici koja ne smije pitati, Plenković je najavio najveći podatkovni centar u Europi, koji bi po ranoj procjeni trebao završiti kao Maksimir, samo s klima-uređajem.</p></article>
             <article class="brief-story story-card" data-category="politika"><div class="story-kicker">VLAST</div><h2>Vlada predstavila novi paket mjera: građani će odsad moći još brže ostati bez svega</h2><p>Nova reforma obećava još manje zraka za isti novac.</p></article>
             <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Odluka je teška. Zato je donosimo već treći mandat.”</p></div>
           </div>
@@ -178,10 +186,17 @@
       <!-- RUBRIKA: kultura - prikazuje se samo nakon klika na "kultura" -->
       <section class="category-only-section" data-category-section="kultura" aria-label="Vijesti iz kulture">
         <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Kultura</h2><span class="section-count">iz galerije apsurda</span></div>
-        <div class="category-culture-layout">
-          <article class="category-feature story-card" data-category="kultura"><div class="story-kicker">KULTURA</div><h1>Otvoren festival nepročitanih knjiga i nedovršenih projekata</h1><p class="lead-dek">Publika oduševljena. Nitko nije došao, ali svi su označili “zainteresiran”.</p><div class="story-meta"><span>kultura</span><span>3 min</span></div></article>
-          <article class="category-feature culture-secondary story-card" data-category="kultura"><div class="story-kicker">NOVI MEDIJ</div><h2>Ministarstvo kulture predstavilo novi oblik umjetnosti: čekanje odgovora</h2><p>Instalacija traje neograničeno, a posjetitelji mogu otići kad god žele.</p><div class="story-meta"><span>kultura</span><span>3 min</span></div></article>
-          <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Nije problem što je umjetnost nerazumljiva. Problem je što je razumljiva.”</p></div>
+        <div class="category-feature-grid">
+          <article class="category-feature story-card" data-category="kultura">
+            <div class="story-kicker">KULTURA</div>
+            <h1>Otvoren festival nepročitanih knjiga i nedovršenih projekata</h1>
+            <p class="lead-dek">Publika oduševljena. Nitko nije došao, ali svi su označili “zainteresiran”.</p>
+            <div class="story-meta"><span>kultura</span><span>3 min</span></div>
+          </article>
+          <div class="category-side">
+            <article class="brief-story story-card" data-category="kultura"><div class="story-kicker">NOVI MEDIJ</div><h2>Ministarstvo kulture predstavilo novi oblik umjetnosti: čekanje odgovora</h2><p>Instalacija traje neograničeno, a posjetitelji mogu otići kad god žele.</p></article>
+            <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Nije problem što je umjetnost nerazumljiva. Problem je što je razumljiva.”</p></div>
+          </div>
         </div>
       </section>
 
@@ -245,6 +260,13 @@
       <div class="footer-meta"><span>© 2026 ŠIT</span><span>napravljeno s nevjericom</span><span>kontakt: <a id="footerEmail" href="#" aria-label="e-mail adresa redakcije"></a></span></div>
     </footer>
 
+    <dialog id="storyDialog" class="manifesto-dialog story-dialog" aria-label="Vijest">
+      <button class="dialog-close" id="storyDialogClose" aria-label="Zatvori">×</button>
+      <span class="story-kicker" id="storyDialogKicker"></span>
+      <h2 id="storyDialogTitle"></h2>
+      <div class="story-dialog-body" id="storyDialogBody"></div>
+      <div class="story-meta"><span id="storyDialogMetaLeft"></span><span id="storyDialogMetaRight"></span></div>
+    </dialog>
     <dialog id="manifestoDialog" class="manifesto-dialog">
       <button class="dialog-close" id="dialogClose" aria-label="Zatvori">×</button>
       <span class="story-kicker">UREDNIČKI MANIFEST</span>

@@ -48,7 +48,14 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 .issue-button { color: var(--accent); }
 .breaking-line { align-items: center; border-bottom: 1px solid var(--line); display: flex; gap: 15px; padding: 13px 0; }
 .breaking-label { background: var(--accent); color: var(--paper); font: 500 10px var(--mono); letter-spacing: .1em; padding: 4px 7px; text-transform: uppercase; }
-.breaking-line p { flex: 1; font: 700 12px var(--sans); margin: 0; }
+.ticker { flex: 1; overflow: hidden; }
+.breaking-line .ticker p { display: inline-block; font: 700 12px var(--sans); margin: 0; white-space: nowrap; width: max-content; }
+.ticker p.is-scrolling { animation: ticker-scroll var(--ticker-duration, 12s) linear infinite; }
+@keyframes ticker-scroll {
+  0%, 10% { transform: translateX(0); }
+  90%, 100% { transform: translateX(-100%); }
+}
+@media (prefers-reduced-motion: reduce) { .ticker p.is-scrolling { animation: none; } }
 .breaking-time { color: var(--muted); font: 10px var(--mono); }
 .lead-grid { display: grid; gap: 34px; grid-template-columns: minmax(0, 1.8fr) minmax(260px, .8fr); padding: 36px 0 45px; }
 .story-kicker { color: var(--accent); font: 500 10px var(--mono); letter-spacing: .12em; }
@@ -118,11 +125,13 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .site-footer p { color: var(--muted); font: 11px var(--mono); margin: 0; text-align: center; }
 .footer-meta { color: var(--muted); display: flex; flex-direction: column; font: 9px/1.7 var(--mono); text-align: right; text-transform: uppercase; }
 .footer-meta a { color: inherit; text-decoration: none; }
-.manifesto-dialog { background: var(--paper); border: 4px solid var(--ink); color: var(--ink); max-width: 520px; padding: 34px; position: relative; }
+.manifesto-dialog { background: var(--paper); border: 4px solid var(--ink); color: var(--ink); max-width: 520px; padding: 34px; }
 .manifesto-dialog::backdrop { background: rgba(22,22,22,.65); }
 .manifesto-dialog h2 { font: 700 35px/1.05 var(--serif); letter-spacing: -.06em; margin: 20px 0; }
 .manifesto-dialog h2 em { color: var(--accent); font-style: normal; }
 .manifesto-dialog p { font: 15px/1.5 var(--serif); }
+[data-story] { cursor: pointer; }
+.story-dialog { max-height: 84vh; overflow-y: auto; }
 .dialog-signature { font-family: var(--mono) !important; font-size: 11px !important; text-transform: uppercase; }
 .dialog-close { background: none; border: 0; cursor: pointer; font-size: 30px; position: absolute; right: 12px; top: 6px; }
 .is-hidden { display: none !important; }
@@ -134,6 +143,8 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .category-feature-grid, .category-sport-layout, .category-culture-layout { border-bottom: 1px solid var(--line); display: grid; gap: 34px; grid-template-columns: 1.6fr 1fr; padding-top: 30px; }
 .category-feature h1 { font: 700 clamp(35px, 4vw, 58px)/1.03 var(--serif); letter-spacing: -.06em; margin: 12px 0 18px; }
 .category-feature h2 { font: 700 28px/1.12 var(--serif); letter-spacing: -.04em; margin: 10px 0; }
+.category-feature-group { display: grid; gap: 30px; }
+.category-feature-group .category-feature + .category-feature { border-top: 1px solid var(--line); padding-top: 30px; }
 .category-side { border-left: 1px solid var(--line); padding-left: 28px; }
 .category-side .brief-story { border-bottom: 0; }
 .quote-card p { color: var(--muted); font: 11px var(--mono); margin: 0; }
@@ -178,7 +189,7 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
   .nav-item, .issue-button { font-size: 9px; white-space: nowrap; }
   .nav-rule { display: none; }
   .breaking-line { align-items: flex-start; flex-wrap: wrap; gap: 9px; }
-  .breaking-line p { flex-basis: 80%; }
+  .breaking-line .ticker { flex-basis: 80%; }
   .lead-grid, .bottom-grid { display: block; }
   .lead-grid { padding-top: 27px; }
   .lead-story h1 { font-size: 39px; }
