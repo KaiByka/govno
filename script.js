@@ -87,6 +87,26 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateTick
 
 // ČLANCI: vijesti označene s data-story otvaraju se u prozoru, umjesto na novoj stranici.
 const storyData = {
+  engleska: {
+    kicker: "SPORT / DOM SPREMAN, TRIBINE NE",
+    title: "Modrić i Kane igraju pred publikom koja <em>ne zna što je bilo</em>",
+    body: [
+      "Hrvatska i Engleska na Rujevici igrat će bez odraslih hrvatskih navijača, uz nekoliko stotina engleskih i nekoliko tisuća klinaca mlađih od 14 godina — jedine publike kojoj se na tribinama još vjeruje, prije svega zato što nije stigla naučiti pjesme.",
+      "Kazne UEFA-e i FIFA-e stigle su zbog rasizma i diskriminacije: transparenta s poginulim francuskim dobrovoljcem pod HOS-ovim grbom i natpisom “Za dom spremni”, nacističkog pozdrava u Parizu i skandiranja “Ubij Srbina” u Crnoj Gori. Svijet je na sve to, nažalost, doslovno čitao, umjesto da uvede hrvatsku verziju značenja s dvostrukim konotacijama.",
+      "Vladajući su na kazne odgovorili mikrofonskom tišinom koja se u lokalnoj interpretaciji prevela kao teza da je cijeli svijet oduvijek bio protiv nas. UEFA je, međutim, utvrdila da je publika koja ne zna što je bilo jedina kojoj se može vjerovati da neće ponoviti. HNS razmišlja o tome da i sljedeće utakmice igra bez publike, jer se pokazalo da reprezentacija odraslima ne treba — samo odraslima treba reprezentacija.",
+    ],
+    meta: ["piše: redakcija", "3 min"],
+  },
+  pula: {
+    kicker: "DRUŠTVO / PULA",
+    title: "Hod za život u Puli prošao po planu, <em>samo drugim smjerom</em>: organizatori uvjeravaju da je i to korak",
+    body: [
+      "Prvi Hod za život u Puli ušao je u povijest na startu: povorka koja traži apsolutnu zaštitu života od začeća naišla je na žive i morala promijeniti trasu. Skupina mladih sjela je na kraj Ulice Sergijevaca, primijenivši jedinu tehniku protiv koje Hod za život nema argument: postojanje.",
+      "Zaštitarima je trebalo nekoliko metara da od poruka o sreći prijeđu na praktičnu primjenu: mladima su, prema svjedočenjima, upućivane “pičke”, “sotonisti” i prijetnje silovanjem, dok se s pozornice istodobno govorilo o nježnosti i dostojanstvu. Transparent “U Puli hodamo za Kaštijun” prvi je put povezao maternicu s gospodarenjem otpadom.",
+      "Organizatori su ponovili da neće odustati ni posustati te najavili raniji polazak, sigurnijom trasom i novo geslo: “Prvi korak je zakon. Drugi korak je zaobilaznica.”",
+    ],
+    meta: ["piše: redakcija", "3 min"],
+  },
   festival: {
     kicker: "KULTURA / FESTIVAL",
     title: "Otvoren festival <em>nepročitanih knjiga</em> i nedovršenih projekata",
