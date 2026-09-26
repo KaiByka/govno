@@ -37,6 +37,7 @@
         <button class="nav-item" data-filter="sport">sport</button>
         <button class="nav-item" data-filter="kultura">kultura</button>
         <button class="nav-item" data-filter="foto">foto</button>
+        <button class="nav-item" data-filter="šit-of-the-week">šit of the week</button>
         <span class="nav-rule" aria-hidden="true"></span>
         <button class="issue-button" id="manifestoButton">što je ovo?</button>
       </nav>
@@ -201,6 +202,23 @@
         </div>
       </section>
 
+      <!-- RUBRIKA: šit of the week - objava tjednog pobjednika -->
+      <section class="category-only-section" data-category-section="šit-of-the-week" aria-label="Šit of the week">
+        <div class="category-header"><span class="story-kicker">POSEBNO IZDANJE</span><h2>Šit of the week</h2><span class="section-count">stvarne izjave, bilivit or not.</span></div>
+        <div class="category-feature-grid">
+          <article class="category-feature quote-card story-card" data-category="šit-of-the-week">
+            <div class="story-kicker">GOST KOJI JE POBIJEDIO / KAO DOMAĆI GOVORIO</div>
+            <blockquote>“Jebem ti fudbal da ti jebem”</blockquote>
+            <p class="quote-attribution">— Ivan Jovanović, izbornik Grčke nakon što je pobijedio Srbiju na Marakani</p>
+            <p class="quote-source">Izvor: index.hr, 25. rujna 2026.</p>
+          </article>
+          <div class="category-side">
+            <article class="quote-card story-card" data-category="šit-of-the-week"><div class="story-kicker">CITAT IZ STVARNOSTI / OVAJ ŠIT NIJE ŠALA</div><blockquote>“Nismo činili čuda.”</blockquote><p class="quote-attribution">— Andrej Plenković, uz objavu najvećeg podatkovnog centra u Europi</p><p class="quote-source">Izvor: ŠIT, arhiva redakcije, 24. rujna 2026.</p></article>
+            <div class="editor-note"><span class="note-stamp">BILJEŠKA</span><p>“Nagrada se ne dodjeljuje po kvaliteti. Dodjeljuje se po upornosti.”</p></div>
+          </div>
+        </div>
+      </section>
+
       <!-- NASLOVNICA: citat iz stvarnosti i "Šit of the Year" -->
       <section class="bottom-grid homepage-only">
         <div class="quote-panel">
@@ -224,7 +242,7 @@
     <footer class="site-footer">
       <div class="footer-brand brand-lockup"><span class="brand-s">Š</span>IT<span class="brand-dot">.</span></div>
       <p>satira nije vijest, ali pogađa u sridu.</p>
-      <div class="footer-meta"><span>© 2026 ŠIT</span><span>napravljeno s nevjericom</span><span>kontakt: redakcija@šit.hr</span></div>
+      <div class="footer-meta"><span>© 2026 ŠIT</span><span>napravljeno s nevjericom</span><span>kontakt: <a id="footerEmail" href="#" aria-label="e-mail adresa redakcije"></a></span></div>
     </footer>
 
     <dialog id="manifestoDialog" class="manifesto-dialog">

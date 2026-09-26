@@ -56,3 +56,9 @@ const issueNumber = document.querySelector("#issueNumber");
 const firstIssueDate = Date.UTC(2026, 9, 2);
 const daysSinceFirst = Math.floor((Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) - firstIssueDate) / 86400000);
 issueNumber.textContent = String(Math.max(0, Math.floor(daysSinceFirst / 7) + 1)).padStart(3, "0");
+
+// KONTAKT: adresa se sastavlja tek u pregledniku (ROT13), da je harvesteri ne pokupi iz izvorne datoteke.
+const emailLink = document.querySelector("#footerEmail");
+const email = "erqnxpvwb@tbiab.fv".replace(/[a-z]/g, (c) => String.fromCharCode((c.charCodeAt(0) - 84) % 26 + 97));
+emailLink.href = "mailto:" + email;
+emailLink.textContent = email;

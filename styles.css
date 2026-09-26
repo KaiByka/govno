@@ -117,6 +117,7 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .footer-brand { font: 700 34px var(--serif); letter-spacing: -.1em; }
 .site-footer p { color: var(--muted); font: 11px var(--mono); margin: 0; text-align: center; }
 .footer-meta { color: var(--muted); display: flex; flex-direction: column; font: 9px/1.7 var(--mono); text-align: right; text-transform: uppercase; }
+.footer-meta a { color: inherit; text-decoration: none; }
 .manifesto-dialog { background: var(--paper); border: 4px solid var(--ink); color: var(--ink); max-width: 520px; padding: 34px; position: relative; }
 .manifesto-dialog::backdrop { background: rgba(22,22,22,.65); }
 .manifesto-dialog h2 { font: 700 35px/1.05 var(--serif); letter-spacing: -.06em; margin: 20px 0; }
@@ -135,6 +136,9 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .category-feature h2 { font: 700 28px/1.12 var(--serif); letter-spacing: -.04em; margin: 10px 0; }
 .category-side { border-left: 1px solid var(--line); padding-left: 28px; }
 .category-side .brief-story { border-bottom: 0; }
+.quote-card p { color: var(--muted); font: 11px var(--mono); margin: 0; }
+.quote-card .quote-source { font-size: 9px; margin-top: 8px; text-transform: uppercase; }
+.category-side .quote-card blockquote { font-size: clamp(20px, 2vw, 25px); margin: 14px 0 12px; }
 .sport-stamp { color: var(--accent); font: 700 64px var(--mono); }
 .category-sport-layout {
   align-items: start;
