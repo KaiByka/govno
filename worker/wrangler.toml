@@ -1,0 +1,8 @@
+name = "govno-brojac"
+main = "counter.js"
+compatibility_date = "2026-09-27"
+
+# Nakon "npx wrangler kv namespace create POPIS" upisati vraćeni id ispod.
+[[kv_namespaces]]
+binding = "POPIS"
+id = "bbd7eb3264ff4de7af5a345cf22800d5"

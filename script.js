@@ -188,9 +188,11 @@ storyDialog.addEventListener("click", (event) => {
   if (event.target === storyDialog) storyDialog.close();
 });
 
-// BROJAČ POSJETA: rubrika "Kol'ko nas ima". Popis čitateljstva vodi se po uređaju,
-// bez poslužitelja — brojač je lokalan i pamti samo vaše posjete, kao i svaka naša statistika.
+// BROJAČ POSJETA: rubrika "Kol'ko nas ima". Kad je CENSUS_URL postavljen, popis čitateljstva
+// vodi Cloudflare Worker (zajednički broj za sve posjetitelje, kod u worker/counter.js);
+// inače se broji lokalno po uređaju — kao i svaka naša statistika, točna samo onome tko gleda.
 const CENSUS_KEY = "sit-popis-citaljstva";
+const CENSUS_URL = "https://govno-brojac.kaibyka.workers.dev/";
 const censusVisitorsElement = document.querySelector("#censusVisitors");
 const censusEmigrationElement = document.querySelector("#censusEmigration");
 const censusVisitNumber = document.querySelector("#censusVisitNumber");
@@ -205,24 +207,47 @@ function renderCensusDigits(element, value) {
   });
 }
 
-let census = null;
-try {
-  census = JSON.parse(localStorage.getItem(CENSUS_KEY));
-} catch (error) {
-  census = null;
-}
-if (!census || typeof census.visits !== "number" || typeof census.emigration !== "number") {
-  // Prvo brojanje: nas je sedmero, a otišlo ih je, kao i uvijek, više.
-  census = { visits: 7, emigration: 1258 };
-}
-census.visits += 1;
-census.emigration += 3 + Math.floor(Math.random() * 3);
-try {
-  localStorage.setItem(CENSUS_KEY, JSON.stringify(census));
-} catch (error) {
-  // Ako se popis ne da spremiti, broji se naoko — ni prva takva metodologija.
+// Lokalni popis (kad Worker nije postavljen): broje se samo posjete ovog preglednika.
+function localCensus() {
+  let census = null;
+  try {
+    census = JSON.parse(localStorage.getItem(CENSUS_KEY));
+  } catch (error) {
+    census = null;
+  }
+  if (!census || typeof census.visits !== "number" || typeof census.emigration !== "number") {
+    // Prvo brojanje: nas je sedmero, a otišlo ih je, kao i uvijek, više.
+    census = { visits: 7, emigration: 1258 };
+  }
+  census.visits += 1;
+  census.emigration += 3 + Math.floor(Math.random() * 3);
+  try {
+    localStorage.setItem(CENSUS_KEY, JSON.stringify(census));
+  } catch (error) {
+    // Ako se popis ne da spremiti, broji se naoko — ni prva takva metodologija.
+  }
+  return census;
 }
 
-renderCensusDigits(censusVisitorsElement, census.visits);
-renderCensusDigits(censusEmigrationElement, census.emigration);
-censusVisitNumber.textContent = String(census.visits).padStart(8, "0");
+async function loadCensus() {
+  if (CENSUS_URL) {
+    try {
+      const response = await fetch(CENSUS_URL, { method: "POST" });
+      if (response.ok) {
+        const data = await response.json();
+        if (typeof data.visits === "number" && typeof data.emigration === "number") {
+          return data;
+        }
+      }
+    } catch (error) {
+      // Worker nedostupan: pada se na lokalni popis, da nitko ne ostane neizbrojan.
+    }
+  }
+  return localCensus();
+}
+
+loadCensus().then((census) => {
+  renderCensusDigits(censusVisitorsElement, census.visits);
+  renderCensusDigits(censusEmigrationElement, census.emigration);
+  censusVisitNumber.textContent = String(census.visits).padStart(8, "0");
+});
