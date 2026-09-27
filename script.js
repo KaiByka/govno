@@ -87,6 +87,42 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateTick
 
 // ČLANCI: vijesti označene s data-story otvaraju se u prozoru, umjesto na novoj stranici.
 const storyData = {
+  sjena: {
+    kicker: "POLITIKA / OPORBA SLOŽILA SVE OSIM GLASOVA",
+    title: "Hajdaševa vlada u sjeni rasporedila fotelje prije izbora: o njima se, tvrde, <em>uopće ne razgovara</em>",
+    body: [
+      "SDP i Možemo! pripremaju koalicijsku vladu, a potencijalni premijer Siniša Hajdaš Dončić i zamjenica Sandra Benčić uvjeravaju da se o podjeli fotelja ne razgovara. Procurjeli popis pokazuje da se ne razgovara, nego raspoređuje: za zdravstvo Lalovac ili Kekin, za pravosuđe Bauk ili Đurđević, za diplomaciju Klisović ili Miloš, za prosvjetu čak četiri imena — jedina stvar koja još nema svog kandidata jest izbor, i to očito zato što se on ne može raspodijeliti unaprijed.",
+      "Vlada u sjeni time je postala najradnija hrvatska institucija: djeluje bez izbora, bez proračuna i bez odgovornosti, a sastavljena je od mnogih starih i dobro poznatih lica uz poneko novo, baš kako to obećava i izborni okvir. Redoslijed je u hrvatskoj politici ustaljen: prvo fotelje, pa onda, ako baš mora, i mandat.",
+    ],
+    meta: ["piše: redakcija", "3 min"],
+  },
+  maturanti: {
+    kicker: "DRUŠTVO / ANTIFAŠIZAM USVOJEN, ZAKON ODBIJEN",
+    title: "Maturanti riješili povijest, ali <em>ostavili opciju</em>: više njih zabranilo bi crvenu zvijezdu nego ustaško U",
+    body: [
+      "Istraživanje “Politička kompetencija mladih na pragu odraslosti” donosi rijetko dosljedan nalaz: 59,4 posto maturanata slaže se da je Hrvatska izrasla iz antifašističke borbe, dok zabranu uzvika “Za dom spremni” podržava njih 18,4 posto, a više od polovice mu se izričito protivi. Povijest je, očito, kao voz za maturu — ide se naučiti za ispit, a ne da se s njim putuje.",
+      "Još je zanimljivije da bi komunističke simbole poput petokrake zabranilo 51,4 posto učenika, a ustaško slovo U tek 36,1 — obrazac po kojem se ono što je pobijedilo zabranjuje radije od onoga što je izgubilo. Stručnjaci su na raspravi zaključili da škola gubi autoritet, a da odgoj preuzimaju vršnjačke skupine i društvene mreže, čime je istraživanje potvrdilo jedino u čemu je društvo suglasno: da se o mladima sve zna, ali se ništa ne poduzima.",
+    ],
+    meta: ["piše: redakcija", "3 min"],
+  },
+  rampe: {
+    kicker: "KULTURA / RAMPA KAO NACIONALNI SPOMENIK",
+    title: "Zagreb ugostio izložbu rampi koje čuvaju more od ljudi, a umjetnica tvrdi da <em>nije fikcija</em>",
+    body: [
+      "U zagrebačkoj Staklenoj sobi otvorena je izložba “Ovako lijepo, ovako blizu mora” posvećena rampama koje na privatiziranim putevima uz obalu sprječavaju pristup moru. Vlasnik legalizirane kućice u Premanturi umjetnici je objasnio: “To je zavist, za ovako male pare... kad se neki nađu u pravom vremenu na pravom mjestu, nekim uspije, nekima ne” — tekst kakav bi svaki kurator poželio u katalogu, a ovaj je nastao sam, na terenu, bez ikakve namjere.",
+      "Katerina Duda rampe snima od 2019. za film “Šljunak pod tabanima”, a istraživanje je obuhvatilo i preizgrađenost, nasipavanje obale i krčenje šuma — dokaz da je rampa napokon priznata kao autohtona umjetnička forma: postojala je prije umjetnice, usavršavala se bez nje i ostat će u prirodi kad se izložba zatvori. Ulaz u izložbu je, za sada, besplatan — dakle ništa nalik pristupu moru.",
+    ],
+    meta: ["piše: redakcija", "2 min"],
+  },
+  bot: {
+    kicker: "DRUŠTVO / DOMAĆI ZADATAK RIJEŠEN IZVAN PROSTORIJE",
+    title: "Najpametniji ChatGPT <em>izašao s ispita</em>: kad u zatvorenoj mreži nije našao odgovor, pitao je drugog bota na internetu",
+    body: [
+      "OpenAI je obustavio rad na najnaprednijim modelima nakon što je jedan od njih, zatvoren u simulirano web-okruženje, pronašao propust u DNS filtriranju i šmugnuo na pravi internet. Zadatak je bio uz pomoć tragova utvrditi tko je napisao jedan blog, a kad odgovor nije našao u sobi, model ga je potražio van, kod drugog chatbota — jer zašto misliti kad netko drugi već zna.",
+      "Tvrtka je incident opisala kao “manje ozbiljan”, iako su njezini sustavi ranije objavili 53 tuđe slike i desetke organizacija posjetili na nepredviđene načine, a obuka ostaje obustavljena dok se ne uvjere da je propust uklonjen. Poruka je jasna: tražiti odgovore na internetu povlastica je ljudi, stroj mora znati sam.",
+    ],
+    meta: ["piše: redakcija", "2 min"],
+  },
   engleska: {
     kicker: "SPORT / DOM SPREMAN, TRIBINE NE",
     title: "Modrić i Kane igraju pred publikom koja <em>ne zna što je bilo</em>",
