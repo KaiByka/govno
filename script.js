@@ -187,3 +187,42 @@ storyDialogClose.addEventListener("click", () => storyDialog.close());
 storyDialog.addEventListener("click", (event) => {
   if (event.target === storyDialog) storyDialog.close();
 });
+
+// BROJAČ POSJETA: rubrika "Kol'ko nas ima". Popis čitateljstva vodi se po uređaju,
+// bez poslužitelja — brojač je lokalan i pamti samo vaše posjete, kao i svaka naša statistika.
+const CENSUS_KEY = "sit-popis-citaljstva";
+const censusVisitorsElement = document.querySelector("#censusVisitors");
+const censusEmigrationElement = document.querySelector("#censusEmigration");
+const censusVisitNumber = document.querySelector("#censusVisitNumber");
+
+function renderCensusDigits(element, value) {
+  const digits = String(Math.max(0, Math.floor(value))).padStart(8, "0").split("");
+  element.textContent = "";
+  digits.forEach((digit) => {
+    const digitBox = document.createElement("span");
+    digitBox.textContent = digit;
+    element.appendChild(digitBox);
+  });
+}
+
+let census = null;
+try {
+  census = JSON.parse(localStorage.getItem(CENSUS_KEY));
+} catch (error) {
+  census = null;
+}
+if (!census || typeof census.visits !== "number" || typeof census.emigration !== "number") {
+  // Prvo brojanje: nas je sedmero, a otišlo ih je, kao i uvijek, više.
+  census = { visits: 7, emigration: 1258 };
+}
+census.visits += 1;
+census.emigration += 3 + Math.floor(Math.random() * 3);
+try {
+  localStorage.setItem(CENSUS_KEY, JSON.stringify(census));
+} catch (error) {
+  // Ako se popis ne da spremiti, broji se naoko — ni prva takva metodologija.
+}
+
+renderCensusDigits(censusVisitorsElement, census.visits);
+renderCensusDigits(censusEmigrationElement, census.emigration);
+censusVisitNumber.textContent = String(census.visits).padStart(8, "0");
