@@ -203,7 +203,9 @@ storyDialog.addEventListener("click", (event) => {
 // vodi Cloudflare Worker (zajednički broj za sve posjetitelje, kod u worker/counter.js);
 // inače se broji lokalno po uređaju — kao i svaka naša statistika, točna samo onome tko gleda.
 const CENSUS_KEY = "sit-popis-citaljstva";
-const CENSUS_URL = "https://govno-brojac.kaibyka.workers.dev/";
+const CENSUS_URL = location.protocol === "https:" && location.hostname === "govno.si"
+  ? "https://govno-brojac.kaibyka.workers.dev/"
+  : "";
 const censusVisitorsElement = document.querySelector("#censusVisitors");
 const censusEmigrationElement = document.querySelector("#censusEmigration");
 const censusVisitNumber = document.querySelector("#censusVisitNumber");
