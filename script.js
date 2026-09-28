@@ -133,6 +133,17 @@ const storyData = {
     ],
     meta: ["piše: redakcija", "3 min"],
   },
+  "gol-kasni": {
+    kicker: "SPORT / SUSJEDSKI VAR",
+    title: "Novi TV toliko je moderan da <em>susjed vidi gol prije vas</em>",
+    body: [
+      "Kupili ste novi televizor, uzeli OTT prijamnik i smjestili se za utakmicu. Susjed preko puta, kojem je stari IPTV uređaj preživio tri selidbe i jednu promjenu operatera, već slavi gol dok vaši igrači još razmišljaju hoće li prijeći centar. Tehnologija je napredovala: sad rezultat možete saznati u stvarnom vremenu, a utakmicu gledati naknadno.",
+      "Razlog nije nužno loš televizor. IPTV signal putuje operaterovom upravljanom mrežom, dok OTT aplikacije preko interneta učitavaju video segmente i drže ih u međuspremniku kako slika ne bi zastajala. Standardni HLS može koristiti segmente od šest sekundi, a player prije reprodukcije prikupi nekoliko njih; tako se prijenos može odgoditi 15 do 30 sekundi. Dovoljno da mobitel već zavibrira, susjed vikne „gol”, a vi još gledate kako se lopta približava kaznenom prostoru.",
+      "Operaterima OTT donosi modernije sučelje, gledanje na više uređaja i manje potrebe za posebnom infrastrukturom. Gledatelju donosi i novu kućnu dilemu: ugasiti obavijesti, zatvoriti prozor ili zamoliti susjeda da slavi u tišini do završetka napada. Napredniji standardi mogu smanjiti kašnjenje, ali dok ne stignu do vašeg ekrana, najbrži prijenos u kvartu i dalje je onaj akustični.",
+      "Izvor: <a href=\"https://www.bug.hr/video-stream/zasto-susjed-vidi-gol-prije-vas-63161\" target=\"_blank\" rel=\"noopener noreferrer\">BUG.hr — Zašto susjed vidi gol prije vas?</a>",
+    ],
+    meta: ["piše: susjedov televizor koji već zna rezultat", "3 min"],
+  },
   pula: {
     kicker: "DRUŠTVO / PULA",
     title: "Hod za život u Puli prošao po planu, <em>samo drugim smjerom</em>: organizatori uvjeravaju da je i to korak",

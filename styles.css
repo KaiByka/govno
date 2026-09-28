@@ -133,6 +133,9 @@ blockquote { font: 700 clamp(26px, 3vw, 43px)/1.08 var(--serif); letter-spacing:
 .manifesto-dialog p { font: 15px/1.5 var(--serif); }
 [data-story] { cursor: pointer; }
 .story-dialog { max-height: 84vh; overflow-y: auto; }
+.story-dialog-body a { border-bottom: 1px solid var(--soft-line); color: var(--accent); text-decoration: none; transition: border-color .2s, color .2s; }
+.story-dialog-body a:hover { border-color: var(--accent); color: var(--ink); }
+.story-dialog-body a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .dialog-signature { font-family: var(--mono) !important; font-size: 11px !important; text-transform: uppercase; }
 .dialog-close { background: none; border: 0; cursor: pointer; font-size: 30px; position: absolute; right: 12px; top: 6px; }
 .is-hidden { display: none !important; }
