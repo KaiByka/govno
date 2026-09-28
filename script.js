@@ -87,6 +87,15 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateTick
 
 // ČLANCI: vijesti označene s data-story otvaraju se u prozoru, umjesto na novoj stranici.
 const storyData = {
+  himna: {
+    kicker: "SPORT / SRCE NA SLUŽBENOM PUTU",
+    title: "Bilić se javno ispričao za ruku koja nije stigla do srca: <em>jedina analiza koja se u Hrvatskoj ne propušta</em>",
+    body: [
+      "Slaven Bilić je na konferenciji uoči utakmice sa Španjolskom objasnio zašto mu ruka tijekom himne u Pragu nije bila na srcu: jednostavno je zaboravio, bio je koncentriran na igrače i, vlastitim riječima, ima neki svoj duh. Javna isprika uslijedila je istog trena, čime je Hrvatska riješila jedino pitanje koje je u dvoboju s Češkom ostalo otvoreno.",
+      "Izbornik je podsjetio da je ruku na srce stavio više od sto puta, ponosno, te da to njeguje i poštuje, a nacija je isprike prihvatila s olakšanjem — srce se ipak pronašlo na vrijeme za sljedeću utakmicu. Pobjeda 2:1, zbog koje je sve počelo, spomenuta je usput: u zemlji koja broji ruke na srcu prije golova, rezultat je ionako samo dodatak protokolu.",
+    ],
+    meta: ["piše: redakcija", "3 min"],
+  },
   sjena: {
     kicker: "POLITIKA / OPORBA SLOŽILA SVE OSIM GLASOVA",
     title: "Hajdaševa vlada u sjeni rasporedila fotelje prije izbora: o njima se, tvrde, <em>uopće ne razgovara</em>",
