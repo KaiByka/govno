@@ -9,6 +9,10 @@ const manifestoDialog = document.querySelector("#manifestoDialog");
 const dialogClose = document.querySelector("#dialogClose");
 const voteButton = document.querySelector("#voteButton");
 const voteStatus = document.querySelector("#voteStatus");
+const tagline = document.querySelector(".tagline");
+tagline.tabIndex = 0;
+tagline.setAttribute("role", "group");
+tagline.setAttribute("aria-label", "Dnevna doza domaće stvarnosti na tjednoj bazi. Bez šećera. Bez cenzure. Bez dvostrukih konotacija.");
 
 // PRIKAZ SADRŽAJA: glavne naslovne sekcije skrivaju se kada je odabrana rubrika.
 filterButtons.forEach((button) => {
@@ -152,6 +156,15 @@ const storyData = {
       "Izvor: <a href=\"https://www.bug.hr/video-stream/zasto-susjed-vidi-gol-prije-vas-63161\" target=\"_blank\" rel=\"noopener noreferrer\">BUG.hr — Zašto susjed vidi gol prije vas?</a>",
     ],
     meta: ["piše: susjedov televizor koji već zna rezultat", "3 min"],
+  },
+  "perisic-dres": {
+    kicker: "SPORT / MORALIZIRANJE U NADOKNADI",
+    title: "Perišić tražio Yamalov dres već na poluvremenu, <em>javnost utvrdila što je stvarno pošlo po zlu</em>",
+    body: [
+      "U zemlji u kojoj se svaka gesta reprezentativca može pretvoriti u državno pitanje, razmjena dresa dobila je tretman taktičke pogreške. Analitičari su odmah krenuli rekonstruirati trenutak: je li Perišić trebao pričekati kraj utakmice, a Gvardiol čestitati tek nakon što se Hrvatska vrati u utakmicu — ili barem nakon što se vrati u kadar?",
+      "Yamal je, u međuvremenu, zabio i namjestio gol u prvom poluvremenu, pa još jedan u drugom. No to nije spriječilo domaću javnost da se usred poraza posveti onome što najbolje poznaje: procjeni tuđeg ponašanja. Lopta je možda završila u mreži, ali rasprava je uredno ostala kod nas.",
+    ],
+    meta: ["piše: Ivan Yamal Perišić", "2 min"],
   },
   pula: {
     kicker: "DRUŠTVO / PULA",
