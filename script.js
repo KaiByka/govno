@@ -91,6 +91,15 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateTick
 
 // ČLANCI: vijesti označene s data-story otvaraju se u prozoru, umjesto na novoj stranici.
 const storyData = {
+  signal: {
+    kicker: "DRUŠTVO / SIGNAL PRIMLJEN, PORUKE NEMA",
+    title: "Znanstvenici prvi put uhvatili radio signal s drugog planeta: <em>nitko se, na sreću, nije javio</em>",
+    body: [
+      "Astronomi su s 64 radio teleskopa u Južnoj Africi prvi put izravno snimili radio signal s planeta izvan Sunčevog sustava, a čovječanstvo, koje čeka poziv iz svemira otkad je naučilo gledati u nebo, načas je zastalo. Struka je ubrzo razočarala: emisija ne dolazi od civilizacije, nego od polarne svjetlosti — svemir, dakle, i sam samo emitira, a da ništa ne govori, kao svaka druga televizija.",
+      "Profesor Edo Berger s Harvarda kaže da je student Kevin ušao u ured s riječima “Mislim da mi nećete vjerovati”, što je u znanosti tradicionalno uvod u otkriće, a na drugim mjestima u troškovni račun. Planet, smješten 63 svjetlosne godine od nas, magnetskim poljem odbija tokove nabijenih čestica i čuva vlastitu atmosferu — po čemu je, mjerljivo, ispred svih institucija na ovom planetu. Rad zasad čeka recenziju: ni svemir očito ne objavljuje ništa prije nego što ga netko odobri.",
+    ],
+    meta: ["piše: redakcija", "3 min"],
+  },
   himna: {
     kicker: "SPORT / SRCE NA SLUŽBENOM PUTU",
     title: "Bilić se javno ispričao za ruku koja nije stigla do srca: <em>jedina analiza koja se u Hrvatskoj ne propušta</em>",
@@ -156,6 +165,15 @@ const storyData = {
       "Izvor: <a href=\"https://www.bug.hr/video-stream/zasto-susjed-vidi-gol-prije-vas-63161\" target=\"_blank\" rel=\"noopener noreferrer\">BUG.hr — Zašto susjed vidi gol prije vas?</a>",
     ],
     meta: ["piše: susjedov televizor koji već zna rezultat", "3 min"],
+  },
+  "pfas": {
+    kicker: "DRUŠTVO / JEDINA STVAR KOJA OSTAJE",
+    title: "Hrvati testirani na vječne kemikalije: kod svih nađene, kod većine previše — <em>konačno nešto što ova zemlja drži zauvijek</em>",
+    body: [
+      "Europsko istraživanje krvi 110 ljudi iz devet zemalja pronašlo je dugolančane PFAS spojeve kod svih hrvatskih ispitanika, a njih 60 posto i iznad zdravstvenog praga, dok je europski prosjek 25 posto. Po prvi put u nekoj statistici smo ispred Europe — a da nitko nije morao lagati o metodologiji.",
+      "Istraživači su pohitali naglasiti da nalazi nemaju veze s ilegalnim odlagalištem otpada u Lici, čime je slika zaokružena: jedina stvar u zemlji koja je prisutna kod svih, zove se vječna i ne razmišlja o Irskoj. Za razliku od stanovništva, koje se izlučuje znatno brže.",
+    ],
+    meta: ["piše: krvna slika nacije", "3 min"],
   },
   "perisic-dres": {
     kicker: "SPORT / MORALIZIRANJE U NADOKNADI",
