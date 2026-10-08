@@ -99,15 +99,6 @@ const storyData = {
     ],
     meta: ["piše: redakcija", "2 min"],
   },
-  mir: {
-    kicker: "KULTURA / MIR, BRATE, MIR",
-    title: "Rimtutituki",
-    body: [
-      "Rimtutituki je sredinom devedesetih, dok se sve oko njih raspadalo, ponudio najcjelovitiju mirovnu doktrinu u povijesti regije: “Mir je najlepša devojka koju ne može imati svako.” Potom je uslijedila i preventivna klauzula — “Ako ne mogu da letim, ja neću da puzim / jer kad puzim, ja ne mogu da guzim” — prvi put da neka politika mira odbacuje puzanje iz eksplicitno ergonomskih razloga, a ne iz principa.",
-      "Od tada su se u regiji promijenile granice, valute, vlasnici i izgovori, ali ne i rezultat: mirovne su se inicijative redovito sazivale, potpisivale i zaboravljale, dok se refren izgovara u tri minute i drži duže od svega potpisanoga. “Mir! Mir, brate, mir!” time je ostao jedini mirovni proces u regiji s prepoznatljivim ritmom i bez jedne jedine točke koju treba izvršiti.",
-    ],
-    meta: ["piše: refren koji se ne može izbaciti iz glave", "2 min"],
-  },
   signal: {
     kicker: "DRUŠTVO / SIGNAL PRIMLJEN, PORUKE NEMA",
     title: "Znanstvenici prvi put uhvatili radio signal s drugog planeta: <em>nitko se, na sreću, nije javio</em>",
