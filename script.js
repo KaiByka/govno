@@ -91,6 +91,14 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateTick
 
 // ČLANCI: vijesti označene s data-story otvaraju se u prozoru, umjesto na novoj stranici.
 const storyData = {
+  nobel: {
+    kicker: "KULTURA / NAJVIŠE PRIZNANJE: SAKRIJ SE",
+    title: "Nobel za književnost — jedina nagrada čiji dobitnici bježe: Sartre je odbio, Beckett je dobio savjet da se sakrije",
+    body: [
+      "Dok Švedska akademija objavljuje novog laureata, povijest bilježi jedinstven obrazac: Sartre je nagradu odbio, Steinbeck priznao da je ne zaslužuje, Dylan se tri tjedna nije javljao na telefon, a Handke ju je četiri godine pozivao na ukidanje — pa ju 2019. uredno preuzeo s čekom. Beckettov je izdavač uz čestitku poslao i službenu proceduru: “Savjetujem ti da se sakriješ.”",
+    ],
+    meta: ["piše: redakcija", "2 min"],
+  },
   mir: {
     kicker: "KULTURA / MIR, BRATE, MIR",
     title: "Rimtutituki",
