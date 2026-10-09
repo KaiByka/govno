@@ -212,6 +212,16 @@ const storyData = {
     ],
     meta: ["piše: redakcija", "3 min"],
   },
+  "gospic-otpad": {
+    kicker: "POLITIKA / OTPAD SANIRA OTPAD",
+    title: "Ministrica: neka firma koja je navodno napravila nered u Gospiću i očisti ga, <em>tako će bar znati gdje je sve</em>",
+    body: [
+      "Ministrica zaštite okoliša uvjerila je javnost da povjeravanje sanacije tvrtki iz USKOK-ove istrage nema nikakve veze s tim tko je otpad tamo napravio. “To su dva odvojena postupka”, ponovila je triput, dodavši da se mora poštivati presumpcija nevinosti koja, očito, ne vrijedi i za otpad.",
+      "“Ako je tvrtka kriva, platit će naknadu štete. Ako nije kriva, sanirat će. Ako ne znaju jesu li krivi, u Gospiću ionako nitko ne zna čije je to tamo, pa je sve u redu”, kazala je ministrica, uz uvjeravanje da je ugovor s tvrtkom Cezar još nepotpisan, ali da ni jedan dan sanacije ne smije biti pomaknut. Ministre, govno.si na to kaže: kriminalac koji sam počisti svoj zločin u Hrvatskoj se zove konzorcij.",
+      "Izvor: <a href=\"https://www.telegram.hr/politika-kriminal/ministricu-triput-pitali-zar-je-stvarno-moguce-da-ce-gospic-sanirati-firma-osumnjicena-za-oneciscenje-posve-se-pogubila/\" target=\"_blank\" rel=\"noopener noreferrer\">Telegram.hr — Ministricu triput pitali zar je stvarno moguće da će Gospić sanirati firma osumnjičena za onečišćenje</a>",
+    ],
+    meta: ["piše: redakcija", "2 min"],
+  },
 };
 const storyDialog = document.querySelector("#storyDialog");
 const storyDialogKicker = document.querySelector("#storyDialogKicker");
