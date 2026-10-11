@@ -222,6 +222,15 @@ const storyData = {
     ],
     meta: ["piše: redakcija", "2 min"],
   },
+  "pas-prdi": {
+    kicker: "DRUŠTVO / VJERAN DO POSLJEDNJEG DAHA",
+    title: "Četveročlanu obitelj ugušio <em>pas koji prdi</em>",
+    body: [
+      "Kontrola plina u Donjem Vlahovu stigla je nakon što je komšija prijavio “miris kao da im je umro cijeli svemir”. U stanu je pronađeno četvero ljudi bez znakova života i jedan pas mješanac, vjeran i sit. Istraga je ubrzo pokazala da plina nije bilo u cijevima — nego u Roki.",
+      "Vlasti su umirile javnost porukom da pas ne pripada opasnim pasminama te da građani i dalje mirno mogu spavati, po mogućnosti s otvorenim prozorom. Ministarstvo poljoprivrede najavilo je izmjenu propisa po kojemu će grah za ljubimce ubuduće spadati pod oružje kategorije B. Do tada vrijedi staro pravilo: pas je čovjekov najbolji prijatelj, sve do prvog tanjura graha.",
+    ],
+    meta: ["piše: redakcija", "1 min"],
+  },
 };
 const storyDialog = document.querySelector("#storyDialog");
 const storyDialogKicker = document.querySelector("#storyDialogKicker");
